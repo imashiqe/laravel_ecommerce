@@ -54,7 +54,7 @@
                       <td>{{ $sub->created_at->format('d - m - Y . h:i :s  a')}}  ({{ $sub->created_at->diffforHumans() }})</td>
                       <td>{{ $sub->updated_at->format('d - m - Y . h:i :s  a')}}  ({{ $sub->created_at->diffforHumans() }})</td>
                       <td class="text-center">
-                          <a  class="btn btn-success" href="{{ url('restore-subcategory')}}/ {{ $sub->id }}">Restore</a>
+                          <a  class="btn btn-success" href="{{ url('restore-subcategory')}}/ {{ $sub->id }}"> <i class="fas fa-trash-restore-alt"></i></a>
                           <a  class="btn btn-danger DeleteCat" data-id="{{ $sub->id }}" data-toggle="modal" data-target="#modal-default"> Permanent Delete</a>
                           {{-- <a  class="btn btn-danger" href="{{ url('permanent-category') }}/ {{ $cat->id }}" > Permanent Delete</a> --}}
                       </td>

@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>AdminLTE 3 | Dashboard</title>
+  <title>365bazar | Dashboard</title>
 
   <!-- Google Font: Source Sans Pro -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700&display=fallback">
@@ -33,7 +33,7 @@
 
   <!-- Preloader -->
   <div class="preloader flex-column justify-content-center align-items-center">
-    <img class="animation__shake" src="{{ asset('assets/dist/img/AdminLTELogo.png') }}" alt="AdminLTELogo" height="60" width="60">
+    <img class="animation__shake" src="{{ asset('assets/dist/img/logo.png') }}" alt="" height="80" width="120">
   </div>
 
   <!-- Navbar -->
@@ -178,8 +178,8 @@
   <aside class="main-sidebar sidebar-dark-primary elevation-4">
     <!-- Brand Logo -->
     <a href="index3.html" class="brand-link">
-      <img src="{{ asset('assets/dist/img/AdminLTELogo.png') }}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
-      <span class="brand-text font-weight-light">AdminLTE 3</span>
+      <img src="{{ asset('assets/dist/img/365bazarapp.jpg') }}" alt="AdminLTE Logo" class="brand-image img-circle elevation-3" style="opacity: .8">
+      <span class="brand-text font-weight-light">365bazar </span>
     </a>
 
     <!-- Sidebar -->
@@ -223,7 +223,8 @@
           {{-- categories --}}
             <li class="nav-item">
               <a href="#" class="nav-link  ')">
-                <i class="nav-icon fas fa-copy"></i>
+              
+              <i class="fas fa-cube"></i>
                 <p>
                   Categories
                   <i class="fas fa-angle-left right"></i>
@@ -255,7 +256,7 @@
             {{-- sub  categories --}}
             <li class="nav-item">
               <a href="#" class="nav-link">
-                <i class="nav-icon fas fa-copy"></i>
+               <i class="fas fa-boxes"></i>
                 <p>
                   Sub Categories
                   <i class="fas fa-angle-left right"></i>
@@ -288,10 +289,12 @@
             {{-- product --}}
             <li class="nav-item">
               <a href="#" class="nav-link  ')">
-                <i class="nav-icon fas fa-copy"></i>
+              <i class="fab fa-product-hunt"></i>
+                <!-- <i class="nav-icon fas fa-copy"></i> -->
                 <p>
                   Products
                   <i class="fas fa-angle-left right"></i>
+   
                   <span class="badge badge-info right"></span>
                 </p>
               </a>
@@ -931,8 +934,8 @@
    @yield('content')
   <!-- /.content-wrapper -->
   <footer class="main-footer">
-    <strong>Copyright &copy; 2022 <a href="https://gnexer.com/">Gnexer.io</a>.</strong>
-    All rights reserved.
+    <strong>  All Rights Reserved । 365bazar । Copyright &copy; 2022   । Developed By <a href="https://gnexer.com/">Gnexer</a>.</strong>
+   
     <div class="float-right d-none d-sm-inline-block">
       <b>Version</b> 1.0
     </div>

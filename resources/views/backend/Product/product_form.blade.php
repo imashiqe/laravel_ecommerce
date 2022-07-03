@@ -188,7 +188,7 @@ $('#category_id').change(function(){
 
         }else{
         //     $("#state").empty();
-        $("#subcategory_id").empty();
+        $("#sub category_id").empty();
         }
 
         }

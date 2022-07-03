@@ -29,7 +29,7 @@
               <div class="card-header">
                 {{-- <h3 class="card-title">Products </h3> --}}
 
-                <button><a href="{{ url('add-products') }}">Add More Products</a></button>
+                <button><a href="{{ url('add-products') }}"> <i class="fas fa-plus-circle"></i> Add More Products</a></button>
               
 
               </div>
@@ -60,8 +60,8 @@
                       <td>{{ $product->created_at->format('d - m - Y . h:i :s  a')}}  ({{ $product->created_at->diffforHumans() }})</td>
                       <td>{{ $product->updated_at->format('d - m - Y . h:i :s  a')}}  ({{ $product->created_at->diffforHumans() }})</td>
                       <td class="text-center">
-                          <a  class="btn btn-success" href="{{ url('product-edit')}}/ {{ $product->slug }}">Edit</a>
-                          <a  class="btn btn-danger" href="{{ url('delete-product')}}/ {{ $product->id }}">Delete</a>
+                          <a  class="btn btn-success" href="{{ url('product-edit')}}/ {{ $product->slug }}">   <i class="fas fa-edit"></i>   </a>
+                          <a  class="btn btn-danger" href="{{ url('delete-product')}}/ {{ $product->id }}"> <i class="fas fa-trash-alt"></i>  </a>
                       </td>
                      
                     </tr>              

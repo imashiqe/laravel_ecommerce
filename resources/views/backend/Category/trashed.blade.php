@@ -53,8 +53,8 @@
                       <td>{{ $cat->created_at->format('d - m - Y . h:i :s  a')}}  ({{ $cat->created_at->diffforHumans() }})</td>
                       <td>{{ $cat->updated_at->format('d - m - Y . h:i :s  a')}}  ({{ $cat->created_at->diffforHumans() }})</td>
                       <td class="text-center">
-                          <a  class="btn btn-success" href="{{ url('restore-category')}}/ {{ $cat->id }}">Restore</a>
-                          <a  class="btn btn-danger DeleteCat" data-id="{{ $cat->id }}" data-toggle="modal" data-target="#modal-default"> Permanent Delete</a>
+                          <a  class="btn btn-success" href="{{ url('restore-category')}}/ {{ $cat->id }}"> <i class="fas fa-trash-restore-alt"></i> </a>
+                          <a  class="btn btn-danger DeleteCat" data-id="{{ $cat->id }}" data-toggle="modal" data-target="#modal-default"> <i class="fas fa-ban"></i></a>
                           {{-- <a  class="btn btn-danger" href="{{ url('permanent-category') }}/ {{ $cat->id }}" > Permanent Delete</a> --}}
                       </td>
                      

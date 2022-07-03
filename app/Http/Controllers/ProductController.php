@@ -63,12 +63,12 @@ class ProductController extends Controller
       return response()->json($scat);
    }
 //   product edit
-   function productedit($id){
-      
+   function productedit($slug){
+      $product = Product::where('slug', $slug)->first();
       return view('backend.product.product_edit' ,[
          'cats' => Category::all(),
-         'product' =>Product::where('id', $id)->first(),
-         
+         'product' => $product,
+         'scat' => SubCategory::where('category_id' , $product->category_id)->get(),
 
       ]);
           

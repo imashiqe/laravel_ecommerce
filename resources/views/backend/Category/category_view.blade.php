@@ -29,7 +29,7 @@
               <div class="card-header">
                 {{-- <h3 class="card-title">Categories List </h3> --}}
 
-                <button><a href="{{ url('add-category') }}">Add More Category</a></button>
+                <button><a href="{{ url('add-category') }}"> <i class="fas fa-plus-circle"></i> Add More Category</a></button>
               
 
               </div>
@@ -56,8 +56,8 @@
                       <td>{{ $cat->created_at->format('d - m - Y . h:i :s  a')}}  ({{ $cat->created_at->diffforHumans() }})</td>
                       <td>{{ $cat->updated_at->format('d - m - Y . h:i :s  a')}}  ({{ $cat->created_at->diffforHumans() }})</td>
                       <td class="text-center">
-                          <a  class="btn btn-success" href="{{ url('category_edit')}}/ {{ $cat->id }}">Edit</a>
-                          <a  class="btn btn-danger" href="{{ url('delete-category')}}/ {{ $cat->id }}">Delete</a>
+                          <a  class="btn btn-success" href="{{ url('category_edit')}}/ {{ $cat->id }}">  <i class="fas fa-edit"></i> </a>
+                          <a  class="btn btn-danger" href="{{ url('delete-category')}}/ {{ $cat->id }}">  <i class="fas fa-trash-alt"></i>  </a>
                       </td>
                      
                     </tr>              

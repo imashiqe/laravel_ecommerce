@@ -9,7 +9,7 @@
       <div class="container-fluid">
         <div class="row mb-2">
           <div class="col-sm-6">
-            <button><a href="{{ url('add-subcategory') }}">Add More SubCategory</a></button>
+            <button><a href="{{ url('add-subcategory') }}"> <i class="fas fa-plus-circle"></i>  Add More SubCategory</a></button>
           </div>
           <div class="col-sm-6">
             <ol class="breadcrumb float-sm-right">
@@ -60,8 +60,8 @@
                       <td>{{ $cat->created_at->format('d - m - Y . h:i :s  a')}}  ({{ $cat->created_at->diffforHumans() }})</td>
                       <td>{{ $cat->updated_at->format('d - m - Y . h:i :s  a')}}  ({{ $cat->created_at->diffforHumans() }})</td>
                       <td class="text-center">
-                          <a  class="btn btn-success" href="{{ url('sub-category-edit')}}/ {{ $cat->id }}">Edit</a>
-                          <a  class="btn btn-danger" href="{{ url('sub-delete-category')}}/ {{ $cat->id }}">Delete</a>
+                          <a  class="btn btn-success" href="{{ url('sub-category-edit')}}/ {{ $cat->id }}">  <i class="fas fa-edit"></i>  </a>
+                          <a  class="btn btn-danger" href="{{ url('sub-delete-category')}}/ {{ $cat->id }}">  <i class="fas fa-trash-alt"></i>   </a>
                       </td>
                      
                     </tr>              

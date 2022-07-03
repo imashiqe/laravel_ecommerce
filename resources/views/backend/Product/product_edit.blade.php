@@ -33,12 +33,12 @@
          
               <!-- /.card-header -->
               <!-- form start -->
-              <form method="post" action="{{ url('product_edit') }}" enctype="multipart/form-data">
+              <form method="GET" action="{{ url('product_edit') }}" enctype="multipart/form-data">
                 @csrf
                 <div class="card-body">
                   <div class="form-group">
                     <label for="title">Product Name</label>
-                    <input type="text" value="{{$product->id}}"  class="form-control"  @error('title') is-invalid @enderror value="{{ $product->title }}" name="title" id="title" placeholder=" Enter Product Name">
+                    <input type="text" value="{{$product->title}}" class="form-control"  @error('title') is-invalid @enderror value="{{ old('title') }}" name="title" id="title" placeholder=" Enter Product Name">
                     @error('title')
              <div class="alert alert-danger">{{ $message }}</div>
                 @enderror
@@ -60,7 +60,7 @@
                     <select name="category_id" id="category_id" class="form-control">
                         <option value="">select One</option>
                         @foreach ($cats as  $cat)
-                        <option value="{{ $cat->id }}">{{ $cat->category_name }}</option>
+                        <option @if ($product->category_id == $cat->id) selected @endif  value="{{ $cat->id }}">{{ $cat->category_name }}</option>
                         @endforeach
                     </select>
                     @error('category_name')
@@ -72,7 +72,9 @@
                   <div class="form-group">
                     <label for="name">SubCategory  Name</label>
                     <select name="subcategory_id" id="subcategory_id" class="form-control">
-                        
+                        @foreach ($product->$scat as $sct)
+                        <option value="" >{{$sct->subcategory_name}}</option>
+                        @endforeach
                     </select>
                     @error('scategory_name')
                     <div class="alert alert-danger">{{ $message }}</div>
@@ -91,15 +93,15 @@
 
                   <div class="form-group">
                     <label for="name">Summary</label>
-                    <textarea name="summary" id="summary"  class="form-control"  @error('summary') is-invalid @enderror ></textarea>
-                    @error('category_name')
+                    <textarea value="{{$product->summary}}" name="summary" id="summary"  class="form-control"  @error('summary') is-invalid @enderror ></textarea>
+                    @error('summary')
              <div class="alert alert-danger">{{ $message }}</div>
                 @enderror
                   </div>
 
                   <div class="form-group">
                     <label for="name">Description</label>
-                    <textarea name="description" id="description"  class="form-control"  @error('description') is-invalid @enderror ></textarea>
+                    <textarea value="{{$product->description}}" name="description" id="description"  class="form-control"  @error('description') is-invalid @enderror ></textarea>
                     @error('description')
              <div class="alert alert-danger">{{ $message }}</div>
                 @enderror
